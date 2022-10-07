@@ -21,7 +21,7 @@
     "build": "vite build"
   },
   "author": "Jove Jonovski <jovejonovski@gmail.com> (https://github.com/datyin)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.8.3",
     "@typescript-eslint/eslint-plugin": "^5.39.0",
