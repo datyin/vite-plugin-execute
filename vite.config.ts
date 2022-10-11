@@ -5,6 +5,7 @@ export default defineConfig(({ mode }) => {
   return {
     appType: "custom",
     build: {
+      ssr: true,
       target: "node14.18",
       watch: mode === "development" ? {} : null,
       minify: mode === "development" ? false : "esbuild",
