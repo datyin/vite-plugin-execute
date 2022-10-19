@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "noEmit": true,
     "target": "ESNext",
     "lib": [
       "ESNext"
@@ -38,9 +37,7 @@
     ]
   },
   "include": [
-    "./typings/index.d.ts",
-    "./src/*.ts",
-    "./vite.config.ts"
+    "./src/**/*.ts",
   ],
   "exclude": [
     "node_modules/*",

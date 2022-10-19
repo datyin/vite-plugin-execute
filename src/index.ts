@@ -1,6 +1,6 @@
 import { spawn, type ChildProcess } from "node:child_process";
 import type { Plugin } from "vite";
-import type { VitePluginExecuteOption } from "../typings";
+import type { VitePluginExecuteOption } from "./index.typings";
 
 export default function vitePlguinExecute(input: VitePluginExecuteOption): Plugin {
   let command = typeof input?.command === "string" ? input.command.trim() : "";

@@ -1,12 +1,13 @@
 {
   "name": "vite-plugin-execute",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Execute your script after build",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
-  "typings": "./typings/index.d.ts",
+  "types": "./typings/index.d.ts",
   "exports": {
     ".": {
+      "types": "./typings/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
@@ -18,7 +19,8 @@
   ],
   "scripts": {
     "dev": "vite build --mode development",
-    "build": "vite build"
+    "build": "vite build",
+    "dts": "tsc --emitDeclarationOnly --declaration --declarationDir ./typings"
   },
   "author": "Jove Jonovski <jovejonovski@gmail.com> (https://github.com/datyin)",
   "license": "MIT",
