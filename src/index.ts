@@ -1,8 +1,8 @@
-import { spawn, type ChildProcess } from "node:child_process";
+import { type ChildProcess, spawn } from "node:child_process";
 import type { Plugin } from "vite";
 import type { VitePluginExecuteOption } from "./index.typings";
 
-export default function vitePlguinExecute(input: VitePluginExecuteOption): Plugin {
+export default function vitePlguinExecute(input?: VitePluginExecuteOption): Plugin {
   let command = typeof input?.command === "string" ? input.command.trim() : "";
   if (!command) command = "node";
 
@@ -11,9 +11,10 @@ export default function vitePlguinExecute(input: VitePluginExecuteOption): Plugi
 
   const args: string[] = [];
 
-  if (Array.isArray(input?.args) && input.args.length > 0) {
-    args.push(...input.args);
-  } else {
+  if (Array.isArray(input?.args) && input!.args.length > 0) {
+    args.push(...input!.args);
+  }
+  else {
     args.push(".");
   }
 
